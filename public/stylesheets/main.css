@@ -1,0 +1,24 @@
+.fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    border-radius: 100px;
+    background: #73AD21;
+    padding: 0px;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 0px 12px 2px #aaaaaa;
+  }
+  
+  .glyphicon.glyphicon-shopping-cart {
+    left: 19px;
+    top: 20px;
+    font-size: 42px;
+    color: white;
+  }
+  
+  .thumbnail img {
+    width: 350px;
+    height: 250px;
+  }
+  

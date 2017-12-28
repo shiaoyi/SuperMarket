@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小事亭生鮮超市倉儲</title>
+    <link rel='stylesheet' href='/stylesheets/list.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>    
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display-->
+            <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="../main">小事亭生鮮超市</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                <li><a href="../main">首頁</a></li>
+                <li><a href="./store">倉儲</a></li>
+                <li class="active"><a href="#">進貨表單<span class="sr-only">(current)</span></a></li>
+                <li><a href="./discount">優惠區</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search"/>
+                </div>
+                <button class="btn btn-default" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+        <div class="section">
+            <div id="importlist">
+            <h1>進貨表單</h1>
+            <form method="POST" action="/storage/import"> 
+                <!-- action是表示送到哪個位置 -->
+                <div class="importitem control_panel">
+                    <li>商品名
+                    <input name="item" placeholder="名稱..."/>
+                    </li>
+                    <li>價格
+                    <input name="price" placeholder="123.../元"/>
+                    </li>
+                    <li>貨量
+                    <input name="num" placeholder="123.../公斤"/>
+                    </li>
+                    <li>進貨日
+                    <input name="importdate" placeholder="YYYY-MM-DD"/>
+                    </li>
+                    <li>到期日
+                    <input name="duedate" placeholder="YYYY-MM-DD"/>
+                    </li>
+                    <li>打折率
+                    <input name="count" placeholder="請填小數"/>
+                    </li>
+                    <li>促銷天數
+                    <input name="promoteday" placeholder="123.../天"/>
+                    </li>
+                    <button class="addbtn">+新增</button>
+                    <!-- <li></li><span class="addbtn"></span> -->
+                </div>
+            </form>    
+            </div>
+        </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  </body>
+</html>
