@@ -19,7 +19,6 @@ router.post('/import', function(req,res,next){
     num: req.body.num,
     importdate: req.body.importdate,
     duedate: req.body.duedate,
-    count: req.body.count,
     promoteday: req.body.promoteday
   }).then(function(){
     res.redirect('/storage/store');

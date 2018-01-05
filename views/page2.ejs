@@ -21,8 +21,8 @@
             <button class="btn btn-success" type="submit">搜尋食材</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="＃">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="./discount">優惠專區</a></li>
+            <li><a href="./cart">購物車</a></li>
             <li><a href="./login">登出</a></li>
         </ul>
         </div>
@@ -30,13 +30,14 @@
     </nav>
     <div class="container">
     <div class="row">
+        <form method="POST" action="/page2" >
         <div class="col-sm-6 col-md-4">
         <div class="thumbnail"><img src="https://upload.cc/i/ny0A7R.jpg" alt="..."/>
             <div class="caption">
-            <h3>楊桃</h3>
-            <p>21 元/公斤</p>
+            <h3 name="product" value="楊桃">楊桃</h3>
+            <p name="price" value="58">58 元/公斤</p>
             <p>
-            <select name="" id="">
+            <select name="num" id="">
               <option value="">請選擇數量</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -44,18 +45,20 @@
               <option value="4">4</option>
               <option value="more">更多</option>
             </select>
-            <a class="btn btn-success" href="#" role="button">加入購物車</a>
+            <button class="btn btn-success">加入購物車</button>
             </p>
             </div>
         </div>
         </div>
+        </form>
+        <form method="POST" action="/page2" >
         <div class="col-sm-6 col-md-4">
         <div class="thumbnail"><img src="https://upload.cc/i/KRXUyV.jpg" alt="..."/>
             <div class="caption">
             <h3>木瓜</h3>
-            <p>33 元/公斤</p>
+            <p name="price" value="92">92 元/公斤</p>
             <p>
-            <select name="" id="">
+            <select name="num" id="">
               <option value="">請選擇數量</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -63,18 +66,20 @@
               <option value="4">4</option>
               <option value="more">更多</option>
             </select>
-            <a class="btn btn-success" href="#" role="button">加入購物車</a>
+            <button class="btn btn-success">加入購物車</button>
             </p>
             </div>
         </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-        <div class="thumbnail"><img src="https://upload.cc/i/ORPDNx.jpg" alt="..."/>
+        </form>
+        <form method="POST" action="/page2" >
+            <div class="col-sm-6 col-md-4">
+            <div class="thumbnail"><img src="https://upload.cc/i/ORPDNx.jpg" alt="..."/>
             <div class="caption">
-            <h3>番石榴</h3>
-            <p>23 元/公斤</p>
+            <h3 name="product" value="番石榴">番石榴</h3>
+            <p name="price" value="64">64 元/公斤</p>
             <p>
-            <select name="" id="">
+            <select name="num" id="">
               <option value="">請選擇數量</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -82,18 +87,20 @@
               <option value="4">4</option>
               <option value="more">更多</option>
             </select>
-            <a class="btn btn-success" href="#" role="button">加入購物車</a>
+            <button class="btn btn-success">加入購物車</button>
             </p>
             </div>
         </div>
         </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail"><img src="https://upload.cc/i/tZl9If.jpg" alt="..."/>
+        </form>
+        <form method="POST" action="/page2" >
+             <div class="col-sm-6 col-md-4">
+            <div class="thumbnail"><img src="https://upload.cc/i/tZl9If.jpg" alt="..."/>
             <div class="caption">
-            <h3>櫻桃-進口</h3>
-            <p>500 元/公斤</p>
+            <h3 name="product" value="櫻桃-進口">櫻桃-進口</h3>
+            <p name="price" value="1400">1400 元/公斤</p>
             <p>
-            <select name="" id="">
+            <select name="num" id="">
               <option value="">請選擇數量</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -101,18 +108,20 @@
               <option value="4">4</option>
               <option value="more">更多</option>
             </select>
-            <a class="btn btn-success" href="#" role="button">加入購物車</a>
+            <button class="btn btn-success">加入購物車</button>
             </p>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail"><img src="https://upload.cc/i/kznfh1.jpg" alt="..."/>
+            </div>
+            </div>
+        </form>
+        <form method="POST" action="/page2" >
+            <div class="col-sm-6 col-md-4">
+            <div class="thumbnail"><img src="https://upload.cc/i/kznfh1.jpg" alt="..."/>
             <div class="caption">
-            <h3>蓮霧</h3>
-            <p>50 元/公斤</p>
+            <h3 name="product" value="蓮霧">蓮霧</h3>
+            <p name="price" value="140">140 元/公斤</p>
             <p>
-            <select name="" id="">
+            <select name="num" id="">
               <option value="">請選擇數量</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -120,18 +129,20 @@
               <option value="4">4</option>
               <option value="more">更多</option>
             </select>
-            <a class="btn btn-success" href="#" role="button">加入購物車</a>
+            <button class="btn btn-success">加入購物車</button>
             </p>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail"><img src="https://upload.cc/i/spfrlx.jpg" alt="..."/>
+            </div>
+            </div>
+        </form>
+        <form method="POST" action="/page2" >
+            <div class="col-sm-6 col-md-4">
+            <div class="thumbnail"><img src="https://upload.cc/i/spfrlx.jpg" alt="..."/>
             <div class="caption">
-            <h3>椪柑</h3>
-            <p>14 元/公斤</p>
+            <h3 name="product" value="椪柑">椪柑</h3>
+            <p name="price" value="39">39 元/公斤</p>
             <p>
-            <select name="" id="">
+            <select name="num" id="">
               <option value="">請選擇數量</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -139,11 +150,12 @@
               <option value="4">4</option>
               <option value="more">更多</option>
             </select>
-            <a class="btn btn-success" href="#" role="button">加入購物車</a>
+            <button class="btn btn-success">加入購物車</button>
             </p>
             </div>
-        </div>
-    </div> 
+            </div>
+            </div> 
+        </form>
     </div>
     <div class="text-center">
         <ul class="pagination">
@@ -157,7 +169,9 @@
         </ul>
     </div>
     </div>
-    <div class="fixed"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></div>
+    
+    <div class="fixed" onclick="location.href='cart'"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></div>
+    
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>

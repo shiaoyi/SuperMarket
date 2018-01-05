@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>小事亭生鮮超市倉儲</title>
+    <title>小事亭生鮮超市倉儲折扣區</title>
     <!-- <link rel='stylesheet' href='/stylesheets/list.css' /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
@@ -18,12 +18,7 @@
                 <li><a href="./import">進貨表單<span class="sr-only">(current)</span></a></li>
                 <li class="active"><a href="./discount">優惠區</a></li>
             </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                <input class="form-control" type="text" placeholder="Search"/>
-                </div>
-                <button class="btn btn-default" type="submit">Submit</button>
-            </form>
+            
             </div>
         </div>
     </nav>
@@ -31,12 +26,13 @@
     <table class="table table-hover">
         <tr>
         <th>商品名</th>
-        <th>折價</th>
+        <th>優惠價格</th>
         <th>剩餘貨量</th>
         <th>折扣倒數天數</th> 
         </tr>
         <% for (var i = 0; i < items.length; i++){ 
-            dis_price = items[i].price * items[i].count;
+            dis_price1 = items[i].price * 0.88;
+            dis_price2 = items[i].price * 0.9;
 
             var d1 = new Date(items[i].duedate);
             var d2 = new Date();
@@ -45,11 +41,20 @@
             var interval = (d1.getTime() - d2.getTime()) /1000 /60 /60 /24;
             if(interval <= 0){
                 interval = 0;
-            }else if(interval > 0 && interval <= items[i].promoteday){
+            }else if(interval > 0 && interval <= 1){
                 interval = Math.ceil(interval);%>
                 <tr>
                     <td><%= items[i].item %></td>
-                    <td><%= dis_price %></td>
+                    <td><%= dis_price1 %></td>
+                    <td><%= items[i].num %></td>
+                    <td><%= interval %></td>
+                </tr>
+            <%}
+            else if(interval > 0 && interval <= items[i].promoteday){
+                interval = Math.ceil(interval);%>
+                <tr>
+                    <td><%= items[i].item %></td>
+                    <td><%= dis_price2 %></td>
                     <td><%= items[i].num %></td>
                     <td><%= interval %></td>
                 </tr>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小事亭生鮮超市優惠區</title>
+    <link rel='stylesheet' href='/stylesheets/main.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body> 
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="./main">小事亭生鮮超市</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav"></ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search"/>
+                    </div>
+                    <button class="btn btn-success" type="submit">搜尋食材</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./discount">優惠專區</a></li>
+                    <li><a href="./cart">購物車</a></li>
+                    <li><a href="./login">登出</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>   
+    <div class="container" style="margin-top:50px">
+    <table class="table table-hover">
+        <tr>
+        <th>商品名</th>
+        <th>優惠價格(元/公斤)</th>
+        <th>促銷倒數天數</th> 
+        <th>數量選擇(公斤)</th>
+        <th>加入購物車</th> 
+        </tr>
+        <% for (var i = 0; i < items.length; i++){ 
+            dis_price1 = items[i].price * 0.88;
+            dis_price2 = items[i].price * 0.9;
+
+            var d1 = new Date(items[i].duedate);
+            var d2 = new Date();
+            var dayOfHours = d2.getHours();
+            d2.setHours(dayOfHours + 8);
+            var interval = (d1.getTime() - d2.getTime()) /1000 /60 /60 /24;
+            if(interval <= 0){
+                interval = 0;
+            }else if(interval > 0 && interval <= 1){
+                interval = Math.ceil(interval);%>
+                <tr>
+                    <td><%= items[i].item %></td>
+                    <td><%= dis_price1 %></td>
+                    <td><%= interval %> 天</td>
+                    <td><select name="" id="">
+                            <option value="">請選擇數量</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="more">更多</option>
+                        </select>
+                    </td>
+                    <td><a class="btn btn-success" href="#" role="button">加入購物車</a></td>
+                </tr>
+            <%}
+            else if(interval > 0 && interval <= items[i].promoteday){
+                interval = Math.ceil(interval);%>
+                <tr>
+                    <td><%= items[i].item %></td>
+                    <td><%= dis_price2 %></td>
+                    <td><%= interval %> 天</td>
+                    <td><select name="" id="">
+                            <option value="">請選擇數量</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="more">更多</option>
+                        </select>
+                    </td>
+                    <td><a class="btn btn-success" href="#" role="button">加入購物車</a></td>
+                </tr>
+            <%}
+        } %>
+    </table>
+    
+<div class="fixed" onclick="location.href='cart'"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></div>
+    
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script>
+  </body>
+</html>

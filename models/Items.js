@@ -5,7 +5,6 @@ module.exports = function(sequelize, DataTypes){
         num: DataTypes.STRING,
         importdate: DataTypes.DATE,
         duedate: DataTypes.DATE,
-        count: DataTypes.STRING,
         promoteday: DataTypes.TIME
 	});
 	return Item;

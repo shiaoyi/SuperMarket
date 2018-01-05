@@ -18,12 +18,7 @@
                 <li><a href="./import">進貨表單<span class="sr-only">(current)</span></a></li>
                 <li><a href="./discount">優惠區</a></li>
             </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                <input class="form-control" type="text" placeholder="Search"/>
-                </div>
-                <button class="btn btn-default" type="submit">Submit</button>
-            </form>
+            
             </div>
         </div>
     </nav>
@@ -31,23 +26,24 @@
     <table class="table table-hover">
         <tr>
         <th>商品名</th>
+        <th>成本</th>
         <th>價格</th>
         <th>貨量</th>
         <th>進貨日</th>
         <th>到期日</th>
-        <th>打折率</th>
         <th>促銷天數</th> 
         <th>狀態</th>
         <th>操作</th>
         </tr>
-        <% for (var i = 0; i < items.length; i++){ %>
+        <% for (var i = 0; i < items.length; i++){ 
+            var sell = Math.floor(items[i].price * (1+1.8)); %>
         <tr>
             <td><%= items[i].item %></td>
             <td><%= items[i].price %></td>
+            <td><%= sell %></td>
             <td><%= items[i].num %></td>
             <td><%= items[i].importdate %></td>
             <td><%= items[i].duedate %></td>
-            <td><%= items[i].count %></td>
             <td><%= items[i].promoteday %></td>
             <% 
             var d1 = new Date(items[i].duedate);
