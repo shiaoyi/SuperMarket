@@ -38,29 +38,26 @@
         <th>操作</th>
         </tr>
         
-        <% 
-        var total = 0;
-        for (var i = 0; i < products.length; i++){ 
-            var sum = products[i].price * products[i].num;
-            total+=sum;%>
-                <tr>
-                    <td><%= products[i].product %></td>
-                    <td><%= products[i].num %></td>
-                    <td><%= products[i].price %></td>
-                    <td><%= sum %></td>
-                    <td>
-                        <form method="POST" action="/<%= products[i].id %>/delete">
-                            <button class="btn btn-danger">刪除</button>
-                        </form>
-                    </td>
-                </tr>
+       
+        
+        <tr>
+            <td>釋迦</td>
+            <td>1</td>
+            <td>196</td>
+            <td>196</td>
+            <td>
+                <form>
+                    <button class="btn btn-danger">刪除</button>
+                </form>
+            </td>
+        </tr>
 
-        <%}%>
+       
         <tr>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>總金額: <%= total %></td>
+                <td>總金額: 196</td>
                 <td><button class="btn btn-primary">結帳</button></td>
         </tr>
 
